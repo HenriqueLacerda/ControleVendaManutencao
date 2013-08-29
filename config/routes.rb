@@ -1,21 +1,15 @@
 ControleManutencaoVenda::Application.routes.draw do
+  devise_for :users
+
   resources :cities
-
-
   resources :providers
-
-
   resources :customers
-
-
   resources :marks
-
-
   resources :category_products
-
-
   resources :products
+  resources :dashboard
 
+  root :to => 'dashboard#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
