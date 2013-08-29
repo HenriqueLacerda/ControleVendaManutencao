@@ -1,46 +1,64 @@
-<%= form_for(@customer) do |f| %>
-  <% if @customer.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
+<%= simple_form_for (@customer) do |f| %>
+<% if @customer.errors.any? %>
+<div id="error_explanation">
+	<h2><%= pluralize(@customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
 
-      <ul>
-      <% @customer.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+	<ul>
+		<% @customer.errors.full_messages.each do |msg| %>
+		<li>
+			<%= msg %>
+		</li>
+		<% end %>
+	</ul>
+</div>
+<% end %>
 
-  <div class="field">
-    <%= f.label :nome %><br />
-    <%= f.text_field :nome %>
-  </div>
-  <div class="field">
-    <%= f.label :endereco %><br />
-    <%= f.text_field :endereco %>
-  </div>
-  <div class="field">
-    <%= f.label :numero %><br />
-    <%= f.text_field :numero %>
-  </div>
-  <div class="field">
-    <%= f.label :bairro %><br />
-    <%= f.text_field :bairro %>
-  </div>
-  <div class="field">
-    <%= f.label :city %><br />
-
-    <%= f.select(:city_id, City.all.collect { |c| [c.cidade, c.id] }) %>
-  </div>
-  <div class="field">
-  	<%= f.label :cidade %><br />
-    <%= f.text_field :cidade %>
-  </div>
-  <div class="field">
-    <%= f.label :obs %><br />
-    <%= f.text_field :obs %>
-  </div>
-  <div class="actions">
-    <%= f.submit :class => 'btn btn-success' %>
-  </div>
+<div class="row-fluid">
+	<div class="span12">
+		<%= f.input :nome, label: 'Nome' %>
+	</div>
+</div>
+<div class="row-fluid">
+	<div class="span9">
+		<%= f.input :endereco, label_html: { class: 'width: 100%' } %>
+	</div>
+	<div class="span3">
+		<%= f.label :numero %>
+		<br />
+		<%= f.text_field :numero %>
+	</div>
+</div>
+<div class="row-fluid">
+	<div class="span12">
+		<%= f.label :bairro %>
+		<br />
+		<%= f.text_field :bairro %>
+	</div>
+</div>
+<div class="row-fluid">
+	<div class="span3">
+		<%= f.label :city %>
+		<br />
+		<%= f.association :city %>
+		<%= f.select(:city_id, City.all.collect { |c| [c.cidade, c.id] }) %>
+	</div>
+	<div class="span6">
+		<%= f.label :cidade %>
+		<br />
+		<%= f.text_field :cidade %>
+	</div>
+</div>
+<div class="row-fluid">
+	<div class="span12">
+		<%= f.label :obs %>
+		<br />
+		<%= f.text_field :obs %>
+	</div>
+</div>
+<div class="row-fluid">
+	<div class="span12">
+		<%= f.submit :class => 'btn btn-success' %>
+	</div>
+</div>
+</div>
 <% end %>
