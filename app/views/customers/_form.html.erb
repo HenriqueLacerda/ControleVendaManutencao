@@ -29,19 +29,12 @@
   </div>
   <div class="field">
     <%= f.label :city %><br />
-    <%= f.text_field :city %>
+
+    <%= f.select(:city_id, City.all.collect { |c| [c.cidade, c.id] }) %>
   </div>
   <div class="field">
-    <%= f.label :cidade %><br />
+  	<%= f.label :cidade %><br />
     <%= f.text_field :cidade %>
-  </div>
-  <div class="field">
-    <%= f.label :estado %><br />
-    <%= f.text_field :estado %>
-  </div>
-  <div class="field">
-    <%= f.label :cep %><br />
-    <%= f.text_field :cep %>
   </div>
   <div class="field">
     <%= f.label :obs %><br />

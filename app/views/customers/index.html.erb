@@ -22,7 +22,7 @@
     <td><%= customer.endereco %></td>
     <td><%= customer.numero %></td>
     <td><%= customer.bairro %></td>
-    <td><%= customer.city %></td>
+    <td><%= City.find(customer.city).cidade %></td>
     <td><%= customer.cidade %></td>
     <td><%= customer.estado %></td>
     <td><%= customer.cep %></td>
