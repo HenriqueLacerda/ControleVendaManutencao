@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nome: MyString
+  descricao: MyString
+  categoryProduct: 
+  mark: 
+  precoCompra: 9.99
+  precoVenda: 9.99
+  precoMedio: 9.99
+  quantidadeEstoqueMinimo: 9.99
+  quantidadeEstoqueMaximo: 9.99
+  observacao: MyString
+
+two:
+  nome: MyString
+  descricao: MyString
+  categoryProduct: 
+  mark: 
+  precoCompra: 9.99
+  precoVenda: 9.99
+  precoMedio: 9.99
+  quantidadeEstoqueMinimo: 9.99
+  quantidadeEstoqueMaximo: 9.99
+  observacao: MyString

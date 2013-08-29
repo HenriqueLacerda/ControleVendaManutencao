@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @product.nome %>
+</p>
+
+<p>
+  <b>Descricao:</b>
+  <%= @product.descricao %>
+</p>
+
+<p>
+  <b>Categoryproduct:</b>
+  <%= @product.categoryProduct %>
+</p>
+
+<p>
+  <b>Mark:</b>
+  <%= @product.mark %>
+</p>
+
+<p>
+  <b>Precocompra:</b>
+  <%= @product.precoCompra %>
+</p>
+
+<p>
+  <b>Precovenda:</b>
+  <%= @product.precoVenda %>
+</p>
+
+<p>
+  <b>Precomedio:</b>
+  <%= @product.precoMedio %>
+</p>
+
+<p>
+  <b>Quantidadeestoqueminimo:</b>
+  <%= @product.quantidadeEstoqueMinimo %>
+</p>
+
+<p>
+  <b>Quantidadeestoquemaximo:</b>
+  <%= @product.quantidadeEstoqueMaximo %>
+</p>
+
+<p>
+  <b>Observacao:</b>
+  <%= @product.observacao %>
+</p>
+
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
