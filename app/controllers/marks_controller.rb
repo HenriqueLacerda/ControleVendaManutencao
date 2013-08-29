@@ -44,7 +44,7 @@ class MarksController < ApplicationController
 
     respond_to do |format|
       if @mark.save
-        format.html { redirect_to @mark, notice: 'Mark was successfully created.' }
+        format.html { redirect_to action: 'index', notice: 'Mark was successfully created.' }
         format.json { render json: @mark, status: :created, location: @mark }
       else
         format.html { render action: "new" }
