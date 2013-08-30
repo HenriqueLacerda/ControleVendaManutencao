@@ -1,0 +1,3 @@
+rails g scaffold sales data:date customer:references clienteNome clienteEndereco clienteNumero clienteBairro clienteCidade clienteEstado clienteCep  valorTotalProdutos valorDescontoVenda valorTotalVenda
+
+rails g scaffold salesItem sales:references product:references quantidade valorUnitario valorDesconto valorTotal brinde:boolean  
