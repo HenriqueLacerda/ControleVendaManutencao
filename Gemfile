@@ -23,6 +23,8 @@ group :test, :development do
   gem 'rspec-rails'
 end
 
+gem 'simple_form'
+gem 'rails3-jquery-autocomplete'
 gem 'jquery-rails'
 gem 'devise'
 gem 'coveralls', require: false
