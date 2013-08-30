@@ -52,3 +52,14 @@
 </div>
 
 <% end %>
+
+
+<body>
+        <input type="text" id="currency" />
+    </body>
+    <script type="text/javascript">
+    $(function(){
+        $("#currency").maskMoney();
+    })
+    $("#product_precoCompra").maskMoney({symbol:"R$",decimal:",",thousands:"."})
+    </script>

@@ -29,7 +29,7 @@
 $("#dolar").maskMoney()
 //Faz a mascara de moeda do Brasil
 //maskMoney({symbol:"R$",decimal:",",thousands:"."})
-$("#real").maskMoney({symbol:"R$",decimal:",",thousands:"."})
+$("#product_precoCompra").maskMoney({symbol:"R$",decimal:",",thousands:"."})
 //Monta no modelo euro
 $("#euro").maskMoney({symbol:"Euro",decimal:",",thousands:" "})
 //A precisão do decimal (,000) ;
