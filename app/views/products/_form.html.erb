@@ -25,10 +25,10 @@
 		<%= f.input :precoCompra, :input_html => { :type => 'text', :size => 35}, label: 'Preço de Compra' %>
 	</div>
 	<div class="span4">
-		<%= f.input :precoVenda, label: 'Preço de Venda' %>
+		<%= f.input :precoVenda, :input_html => { :type => 'text', :size => 35}, label: 'Preço de Venda' %>
 	</div>
 	<div class="span4">
-		<%= f.input :precoMedio, label: 'Preço Médio' %>
+		<%= f.input :precoMedio, :input_html => { :type => 'text', :size => 35}, label: 'Preço Médio' %>
 	</div>
 </div>
 <div class="row-fluid">
@@ -53,13 +53,11 @@
 
 <% end %>
 
-
-<body>
-        <input type="text" id="currency" />
-    </body>
-    <script type="text/javascript">
+<script type="text/javascript">
     $(function(){
         $("#currency").maskMoney();
     })
     $("#product_precoCompra").maskMoney({symbol:"R$",decimal:",",thousands:"."})
-    </script>
+    $("#product_precoVenda").maskMoney({symbol:"R$",decimal:",",thousands:"."})
+    $("#product_precoMedio").maskMoney({symbol:"R$",decimal:",",thousands:"."})
+</script>
