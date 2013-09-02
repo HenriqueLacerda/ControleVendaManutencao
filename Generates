@@ -1,3 +1,9 @@
+rails g scaffold service nome:string descricao:string valor:decimal
+
+
 rails g scaffold sales data:date customer:references clienteNome clienteEndereco clienteNumero clienteBairro clienteCidade clienteEstado clienteCep  valorTotalProdutos valorDescontoVenda valorTotalVenda
 
 rails g scaffold salesItem sales:references product:references quantidade valorUnitario valorDesconto valorTotal brinde:boolean  
+
+rails g scaffold cashflow customer:references provider:references tipo:string dataLancamento:date dataVencimento:date valor:decimal dataPagamento:date valorPago:decimal 
+

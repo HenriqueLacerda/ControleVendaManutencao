@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130829164648) do
+ActiveRecord::Schema.define(:version => 20130901173121) do
 
   create_table "category_products", :force => true do |t|
     t.string   "nome"
@@ -82,6 +82,33 @@ ActiveRecord::Schema.define(:version => 20130829164648) do
   end
 
   add_index "providers", ["city_id"], :name => "index_providers_on_city_id"
+
+  create_table "sales", :force => true do |t|
+    t.date     "data"
+    t.integer  "customer_id"
+    t.string   "clienteNome"
+    t.string   "clienteEndereco"
+    t.string   "clienteNumero"
+    t.string   "clienteBairro"
+    t.string   "clienteCidade"
+    t.string   "clienteEstado"
+    t.string   "clienteCep"
+    t.string   "valorTotalProdutos"
+    t.string   "valorDescontoVenda"
+    t.string   "valorTotalVenda"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  add_index "sales", ["customer_id"], :name => "index_sales_on_customer_id"
+
+  create_table "services", :force => true do |t|
+    t.string   "nome"
+    t.string   "descricao"
+    t.decimal  "valor"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

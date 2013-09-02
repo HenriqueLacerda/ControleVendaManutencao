@@ -1,0 +1,45 @@
+<h1>Listing sales</h1>
+
+<table>
+  <tr>
+    <th>Data</th>
+    <th>Customer</th>
+    <th>Clientenome</th>
+    <th>Clienteendereco</th>
+    <th>Clientenumero</th>
+    <th>Clientebairro</th>
+    <th>Clientecidade</th>
+    <th>Clienteestado</th>
+    <th>Clientecep</th>
+    <th>Valortotalprodutos</th>
+    <th>Valordescontovenda</th>
+    <th>Valortotalvenda</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sales.each do |sale| %>
+  <tr>
+    <td><%= sale.data %></td>
+    <td><%= sale.customer %></td>
+    <td><%= sale.clienteNome %></td>
+    <td><%= sale.clienteEndereco %></td>
+    <td><%= sale.clienteNumero %></td>
+    <td><%= sale.clienteBairro %></td>
+    <td><%= sale.clienteCidade %></td>
+    <td><%= sale.clienteEstado %></td>
+    <td><%= sale.clienteCep %></td>
+    <td><%= sale.valorTotalProdutos %></td>
+    <td><%= sale.valorDescontoVenda %></td>
+    <td><%= sale.valorTotalVenda %></td>
+    <td><%= link_to 'Show', sale %></td>
+    <td><%= link_to 'Edit', edit_sale_path(sale) %></td>
+    <td><%= link_to 'Destroy', sale, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sale', new_sale_path %>

@@ -9,11 +9,11 @@
       <% end %>
       </ul>
     </div>
-  <% end %>
+  <% end %> 
   <div class="row-fluid">
     <div class="span12">
       <div class="field">
-        <%= f.input :nome, label_html: { class: 'my_class' } %>
+        <%= f.input :nome, :input_html => { :type => 'text', :size => 35}, label: 'Nome' %>
       </div>
     </div>
   </div>

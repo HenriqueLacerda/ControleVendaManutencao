@@ -1,4 +1,10 @@
 ControleManutencaoVenda::Application.routes.draw do
+  resources :sales
+
+
+  resources :services
+
+
   devise_for :users
 
   resources :cities

@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Data:</b>
+  <%= @sale.data %>
+</p>
+
+<p>
+  <b>Customer:</b>
+  <%= @sale.customer %>
+</p>
+
+<p>
+  <b>Clientenome:</b>
+  <%= @sale.clienteNome %>
+</p>
+
+<p>
+  <b>Clienteendereco:</b>
+  <%= @sale.clienteEndereco %>
+</p>
+
+<p>
+  <b>Clientenumero:</b>
+  <%= @sale.clienteNumero %>
+</p>
+
+<p>
+  <b>Clientebairro:</b>
+  <%= @sale.clienteBairro %>
+</p>
+
+<p>
+  <b>Clientecidade:</b>
+  <%= @sale.clienteCidade %>
+</p>
+
+<p>
+  <b>Clienteestado:</b>
+  <%= @sale.clienteEstado %>
+</p>
+
+<p>
+  <b>Clientecep:</b>
+  <%= @sale.clienteCep %>
+</p>
+
+<p>
+  <b>Valortotalprodutos:</b>
+  <%= @sale.valorTotalProdutos %>
+</p>
+
+<p>
+  <b>Valordescontovenda:</b>
+  <%= @sale.valorDescontoVenda %>
+</p>
+
+<p>
+  <b>Valortotalvenda:</b>
+  <%= @sale.valorTotalVenda %>
+</p>
+
+
+<%= link_to 'Edit', edit_sale_path(@sale) %> |
+<%= link_to 'Back', sales_path %>

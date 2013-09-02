@@ -1,0 +1,22 @@
+<%= simple_form_for(@sale) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :data %>
+    <%= f.association :customer %>
+    <%= f.input :clienteNome %>
+    <%= f.input :clienteEndereco %>
+    <%= f.input :clienteNumero %>
+    <%= f.input :clienteBairro %>
+    <%= f.input :clienteCidade %>
+    <%= f.input :clienteEstado %>
+    <%= f.input :clienteCep %>
+    <%= f.input :valorTotalProdutos %>
+    <%= f.input :valorDescontoVenda %>
+    <%= f.input :valorTotalVenda %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
