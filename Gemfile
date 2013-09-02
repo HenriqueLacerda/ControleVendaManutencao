@@ -30,6 +30,7 @@ gem 'devise'
 gem 'coveralls', require: false
 gem 'simple_form'
 gem 'newrelic_rpm'
+gem 'unicorn'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
